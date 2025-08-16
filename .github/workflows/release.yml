@@ -36,7 +36,7 @@ jobs:
           ANDROID_NDK: /usr/local/lib/android/sdk/ndk/27.3.13750724
         working-directory: ${{github.workspace}}/repo
         run: |
-          sudo apt-get -y install mingw-w64
+          sudo apt-get -y install mingw-w64 gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           ${{github.workspace}}/repo/.github/workflows/release-ubuntu.sh ${BUNGEE_VERSION}
           echo v${BUNGEE_VERSION} > install/version.txt
           tar cvzf ${{github.workspace}}/artifact.tgz install

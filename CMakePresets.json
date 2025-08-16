@@ -40,6 +40,19 @@
             }
         },
         {
+            "name": "linux-aarch64",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "aarch64-linux-gnu-gcc",
+                "CMAKE_CXX_COMPILER": "aarch64-linux-gnu-g++",
+                "CMAKE_STRIP": "aarch64-linux-gnu-strip",
+                "CMAKE_FIND_ROOT_PATH_MODE_PROGRAM": "NEVER",
+                "CMAKE_FIND_ROOT_PATH_MODE_LIBRARY": "ONLY",
+                "CMAKE_FIND_ROOT_PATH_MODE_INCLUDE": "ONLY"
+            }
+        },
+        {
             "name": "android",
             "hidden": true,
             "inherits": "base",
